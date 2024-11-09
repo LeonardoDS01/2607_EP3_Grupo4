@@ -11,7 +11,8 @@ app.use(cors())
 app.use(express.json())
 
 /************************************************************/
-
+//Definiendo el endpoint donde se invocará el crearUsuario
+app.use('/api/create-user',require('./routes/usuario'))
 
 
 
