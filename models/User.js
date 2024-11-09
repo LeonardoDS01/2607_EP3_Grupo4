@@ -14,4 +14,9 @@ userSchema.methods.encryptPassword = (password) => {
     return bcrypt.hash(password, salt)
 }
 
+//Metodo para validar la contraseña
+userSchema.methods.validatePassword = function(password){
+    return bcrypt.compare(password,this.password)
+}
+
 module.exports = model('User', userSchema)

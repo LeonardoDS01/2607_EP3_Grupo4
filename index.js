@@ -14,8 +14,8 @@ app.use(express.json())
 //Definiendo el endpoint donde se invocará el crearUsuario
 app.use('/api/create-user',require('./routes/usuario'))
 
-
-
+//Definiendo el endpoint donde se invocará el validarUsuario
+app.use('/api/validate-user', require('./routes/usuario'))
 
 
 /************************************************************/
